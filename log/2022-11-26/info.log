@@ -1,6 +1,0 @@
-2022/11/26 - 08:52:00.984	[34minfo[0m	/var/www/singer/initialize/router.go:28	router register success
-2022/11/26 - 08:52:01.006	[34minfo[0m	/var/www/singer/core/server.go:25	server run success on 	{"address": ":80"}
-2022/11/26 - 08:54:34.668	[34minfo[0m	/var/www/singer/initialize/router.go:28	router register success
-2022/11/26 - 08:54:34.694	[34minfo[0m	/var/www/singer/core/server.go:25	server run success on 	{"address": ":80"}
-2022/11/26 - 08:56:42.484	[34minfo[0m	/var/www/singer/initialize/router.go:28	router register success
-2022/11/26 - 08:56:42.499	[34minfo[0m	/var/www/singer/core/server.go:25	server run success on 	{"address": ":80"}

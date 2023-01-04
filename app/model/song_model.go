@@ -2,6 +2,7 @@ package model
 
 import (
 	"singer/global"
+	"strings"
 )
 
 type Song struct {
@@ -12,8 +13,24 @@ type Song struct {
 	SingerId   uint   `json:"singerId" form:"singerId" gorm:"column:singer_id"`       // 演唱人id
 	Profile    string `json:"profile" form:"profile" gorm:"column:profile"`           // 简介
 	TagIds     string `json:"tagIds" form:"tagIds" gorm:"column:tag_ids"`             // 标签id组合
+
+	// 关联歌词模型
+	Lyric Lyric
 }
 
-func (Song) TableName() string {
+func (*Song) TableName() string {
 	return "song"
+}
+
+// GetSplitLyric
+// @Description: 获取分解后的歌词
+// @receiver song
+// @return lyric
+func (song *Song) GetSplitLyric() (lyric []string) {
+	if song.Lyric.ID <= 0 {
+		global.Db.Preload("Lyric").First(song)
+	}
+
+	lyric = strings.Split(song.Lyric.Content, "\r\n")
+	return
 }
