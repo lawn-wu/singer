@@ -8,7 +8,7 @@ system:
   iplimit-count: 15000
   iplimit-time: 3600
   debug: true
-  domain: "http://localhost"
+  domain: ""
 zap:
   level: info
   prefix: ""
@@ -22,21 +22,21 @@ zap:
 db-list:
   - disable: false
     type: "mysql"
-    alias-name: "singer_mysql"
-    path: 192.168.2.168
+    alias-name: ""
+    path: 
     port: "3306"
     config: charset=utf8mb4&parseTime=True&loc=Local
-    db-name: singer
-    username: root
-    password: mysql
+    db-name: 
+    username: 
+    password: 
     max-idle-conns: 10
     max-open-conns: 100
     log-mode: error
     log-zap: false
   - disable: false
     type: "sqlserver"
-    alias-name: "singer_sqlserver"
-    path: 113.12.77.6
+    alias-name: ""
+    path: 
     port: "6001"
     config: encrypt=disable
     db-name:
@@ -47,12 +47,12 @@ db-list:
     log-mode: error
     log-zap: false
 mysql:
-  path: 192.168.2.168
+  path: 
   port: "3306"
   config: charset=utf8mb4&parseTime=True&loc=Local
-  db-name: singer
-  username: root
-  password: mysql
+  db-name: 
+  username: 
+  password: 
   max-idle-conns: 10
   max-open-conns: 100
   log-mode: error
