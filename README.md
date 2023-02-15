@@ -1,5 +1,3 @@
 # singer
 
-go mod tidy && go run main.go
-
-example: medicine_example.go
+go mod tidy && go run medicine_example.go
