@@ -1,4 +1,5 @@
 # singer
 
-cp config.yaml.example config.yaml
 go mod tidy && go run main.go
+
+example: medicine_example.go
