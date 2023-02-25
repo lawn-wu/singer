@@ -5,6 +5,7 @@ type SystemResponse struct {
 		Msg  string `json:"msg"`
 		Code int    `json:"code"`
 	}
+	Data interface{} `json:"data"`
 }
 
 type PoiMGetResponse struct {
