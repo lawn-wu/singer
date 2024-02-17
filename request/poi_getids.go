@@ -8,13 +8,14 @@ type PoiGetIdsRequest struct {
 	*BaseRequest
 }
 
-func NewGetIdsRequest(systemParam *domain.SystemParam) (poiMGetRequest PoiGetIdsRequest) {
-	poiMGetRequest = PoiGetIdsRequest{
+func NewPoiGetIdsRequest(systemParam *domain.SystemParam) (request PoiGetIdsRequest) {
+	request = PoiGetIdsRequest{
 		BaseRequest: &BaseRequest{
 			Uri:               "/api/v1/poi/getids",
 			RequestMethodType: domain.REQUEST_METHOD_TYPE_GET,
 			SystemParam:       systemParam,
 		},
 	}
+
 	return
 }

@@ -6,10 +6,10 @@ import (
 	"meituan-api/response"
 )
 
-func (r *Client) PoiGetIds() (responseParams response.SystemResponse, err error) {
-	poiGetIdsRequest := request.NewPoiGetIdsRequest(systemParam)
+func (r *Client) PoiOpen() (responseParams response.SystemResponse, err error) {
+	poiOpenRequest := request.NewPoiOpenRequest(systemParam)
 
-	body, err := poiGetIdsRequest.DoRequest()
+	body, err := poiOpenRequest.DoRequest()
 	if err != nil {
 		return
 	}
